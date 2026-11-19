@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import styles from "./Button.module.css"
 
 // Isto está errado - useEffect é o correto
@@ -7,6 +8,20 @@ import styles from "./Button.module.css"
 
 //function Button(props) {
 function Button({texto = "Botão Default", desabilitado = false, onClique}) {
+    
+    const fn = (e) => {
+        console.log("resize")
+        console.log(e)
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", fn)
+
+        return () => {
+            window.removeEventListener("resize", fn)
+        }
+    }, [])
+    
     function btnClicado(){
     console.log("Clicado!", texto)
 

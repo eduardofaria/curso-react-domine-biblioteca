@@ -60,7 +60,10 @@ function App() {
         <>
           <h1>Site Carregado com sucesso!</h1>
           <p>Todo conteúdo do site.</p>
-          <Button texto="incrementar" onClique={() => setContador(contador +1)}/>
+          {contador < 10? (
+            <Button texto="incrementar" onClique={() => setContador(contador + 1)}/>
+          ): (<p>Buttom REMOVIDO</p>)}
+          
           <p>Contador: {contador}</p>
         </>
         )}
