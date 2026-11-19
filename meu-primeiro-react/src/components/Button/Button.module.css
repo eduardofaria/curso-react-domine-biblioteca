@@ -1,0 +1,12 @@
+.btn {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.title {
+    color: red;
+}
+
+.desabilitado {
+    opacity: .5;
+}
