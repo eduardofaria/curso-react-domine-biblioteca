@@ -10,11 +10,11 @@ function App() {
 
   const celsius = unidade === "°F"? ((parseFloat(valor) - 32) / 1.8) : parseFloat(valor)
   const fahrenheit = unidade === "°C"? (parseFloat(valor) * 1.8 + 32) : parseFloat(valor)
-
-  return (
-    <>
     // Estado Derivado - Fonte Única da Verdade - Problemas ao ter um estado dependendo de outro estado.
     // Os estados devem ser autosuficientes
+  return (
+    <>
+
 
       <div className={styles.container}>
         <h2>Conversor de Temperatura</h2>
